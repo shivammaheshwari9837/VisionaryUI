@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct TabBarButton: View {
+public struct TabBarButtonModel {
+    let text: String
+}
+
+public struct TabBarButton: View {
     let text: String
     @Binding var isSelected: Bool
-    var body: some View {
+    public var body: some View {
         Text(text)
             .fontWeight(isSelected ? .heavy : .regular)
             .font(.custom("Avenir", size: 16))
