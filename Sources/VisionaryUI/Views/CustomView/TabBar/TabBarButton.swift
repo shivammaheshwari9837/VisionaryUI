@@ -7,8 +7,14 @@
 
 import SwiftUI
 
-public struct TabBarButtonModel {
-    let text: String
+public struct TabBarButtonModel<Content: View> {
+    public var tabBarTitle: String
+    public var content: CustomTabBarView<Content>
+    
+    init(tabBarTitle: String, @ViewBuilder content: () -> Content) {
+        self.tabBarTitle = tabBarTitle
+        self.content = CustomTabBarView(content: content)
+    }
 }
 
 public struct TabBarButton: View {
