@@ -53,7 +53,6 @@ public struct CustomTopTabBarView: View {
                     GeometryReader(content: { geometry in
                         tabBarButtonModels[itemIndex].content
                             .frame(width: geometry.size.width, height: Constants.tabBarViewHeight)
-                            .background(Color.red)
                     })
                 }
             }
