@@ -37,6 +37,7 @@ public struct CustomTopTabBarView: View {
     
     public var body: some View {
         VStack {
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(tabBarButtonModels.indices, id: \.self) { itemIndex in
